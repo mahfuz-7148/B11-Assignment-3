@@ -18,6 +18,21 @@
         tailwind.config = {
           theme: {
             extend: {
+              keyframes: {
+        slidein: {
+          from: {
+            opacity: "0",
+            transform: "translateY(-10px)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
+      },
+      animation: {
+        slidein: "slidein 3s ease forwards infinite",
+      },
               fontFamily: {
                 sora: ['Sora', 'serif'],
                 ADLaM: ['ADLaM Display', 'serif'],
@@ -79,11 +94,11 @@
                     <div class="hero">
                         <div class="hero-content absolute lg:-left-5 lg:-top-5 -top-12">
                           <div>
-                            <h1 class="lg:text-6xl text-3xl font-normal font-ADLaM Display">Pamper Your Pet, <br> Because They Deserve <br> the Best</h1>
-                            <p class="py-6">
+                            <h1 class="lg:text-6xl text-3xl font-normal font-ADLaM animate-slidein opacity-5">Pamper Your Pet, <br> Because They Deserve <br> the Best</h1>
+                            <p class="py-6 animate-slidein opacity-5">
                                 Discover a world of treats, toys, and essentials handpicked for <br> your furry friends. Shop now and make tails wag with joy!
                             </p>
-                            <button class="btn bg-[#FFDC26] hover:bg-transparent">Find a pet</button>
+                            <button class="btn bg-[#FFDC26] hover:bg-transparent animate-bounce">Find a pet</button>
                           </div>
                         </div>
                       </div>
@@ -318,21 +333,41 @@
                         <h1 class="text-5xl font-bold">$7.99</h1>
                       </div>
                       <div class="absolute -top-24 -right-24 lg:-top-10 lg:right-0">
-                        <img class=" scale-50 lg:scale-90" src="c1-assets/cute-dog-mid.png" alt="">
+                        <img class="scale-50 lg:scale-90" src="c1-assets/cute-dog-mid.png" alt="">
                       </div>
                     </div>
                     <div class=" bg-gradient-to-r from-[#FFF9F4] to-[#F9DF8A] relative  lg:p-20 py-20 !pl-5 rounded-xl">
-                      <div class="">
-                        <h2 class=" text-3xl font-bold ">T-Shirt for Dogs</h2>
+                      <div>
+                        <h2 class="text-3xl font-bold ">T-Shirt for Dogs</h2>
                         <h1 class="text-5xl font-bold text-[#FFDC26]">$7.99</h1>
                       </div>
                       <div class="justify-end absolute -top-20 -right-10 lg:top-20 lg:right-0">
-                        <img class="  scale-50 lg:scale-75" src="c1-assets/cute-pet-mid.png" alt="">
+                        <img class="scale-50 lg:scale-75" src="c1-assets/cute-pet-mid.png" alt="">
                       </div>
                     </div>
                     
                   </div>
                 </section>
             </main>
+
+            <footer class="mb-16 px-4">
+              <section class="max-w-screen-xl mx-auto border border-green-600">
+                <div class="hero">
+                  <div class="hero-content flex-col lg:flex-row">
+                    <img
+                      src="c1-assets/cute-pet-mid.png"
+                      class="max-w-sm" />
+                    <div>
+                      <h1 class="text-5xl font-bold">Box Office News!</h1>
+                      <p class="py-6">
+                        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+                        quasi. In deleniti eaque aut repudiandae et a id nisi.
+                      </p>
+                      <button class="btn btn-primary">Get Started</button>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </footer>
 </body>
 </html>
